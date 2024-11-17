@@ -16,8 +16,8 @@ phases:
       - echo Running cfn-lint to validate CloudFormation template
       - cfn-lint Group25.yaml
 
-      - echo Running Taskcat to test CloudFormation template in non-terminal mode
-      - python -c "import os, sys; sys.stdout.isatty = lambda: False; os.system('taskcat test run -t Group25.yaml -d > taskcat_output.log || echo Taskcat failed')"
+      - echo Running Taskcat to test CloudFormation template
+      - taskcat test run -t Group25.yaml -d > taskcat_output.log || echo Taskcat failed
 
       - echo Contents of taskcat_output.log
       - cat taskcat_output.log  # Xem nội dung của taskcat_output.log
@@ -29,4 +29,3 @@ artifacts:
     - taskcat_output.log  # Đẩy tệp log lên cùng với artifacts
   discard-paths: yes
   base-directory: .  # Thư mục cơ bản chứa các tệp
-  
