@@ -29,3 +29,4 @@ artifacts:
     - taskcat_output.log  # Đẩy tệp log lên cùng với artifacts
   discard-paths: yes
   base-directory: .  # Thư mục cơ bản chứa các tệp
+  
