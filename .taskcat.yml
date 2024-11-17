@@ -4,12 +4,38 @@ project:
     - us-east-1
 
 tests:
-  mytest:
+  vpc:
+    template: Group25.yaml
+    parameters:
+      VpcCIDR: "10.0.0.0/16"
+      KeyName: "Group25"
+    regions:
+      - us-east-1
+
+  public_subnet:
+    template: Group25.yaml
+    parameters:
+      VpcCIDR: "10.0.0.0/16"
+      PublicSubnetCIDR: "10.0.1.0/24"
+      KeyName: "Group25"
+    regions:
+      - us-east-1
+
+  private_subnet:
+    template: Group25.yaml
+    parameters:
+      VpcCIDR: "10.0.0.0/16"
+      PrivateSubnetCIDR: "10.0.2.0/24"
+      KeyName: "Group25"
+    regions:
+      - us-east-1
+
+  full_infrastructure:
     template: Group25.yaml
     parameters:
       VpcCIDR: "10.0.0.0/16"
       PublicSubnetCIDR: "10.0.1.0/24"
       PrivateSubnetCIDR: "10.0.2.0/24"
-      KeyName: "Group25"  
+      KeyName: "Group25"
     regions:
       - us-east-1
