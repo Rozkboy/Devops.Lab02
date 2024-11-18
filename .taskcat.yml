@@ -5,41 +5,37 @@ project:
 
 tests:
   vpc:
-    stack-name: group25-vpc-stack
     template: Group25.yaml
     parameters:
       VpcCIDR: "10.0.0.0/16"
-      KeyName: "Group25"
+      KeyName: "group25"
     regions:
       - us-east-1
 
   public_subnet:
-    stack-name: group25-public-subnet-stack
     template: Group25.yaml
     parameters:
       VpcCIDR: "10.0.0.0/16"
       PublicSubnetCIDR: "10.0.1.0/24"
-      KeyName: "Group25"
+      KeyName: "group25"
     regions:
       - us-east-1
 
   private_subnet:
-    stack-name: group25-private-subnet-stack
     template: Group25.yaml
     parameters:
       VpcCIDR: "10.0.0.0/16"
       PrivateSubnetCIDR: "10.0.2.0/24"
-      KeyName: "Group25"
+      KeyName: "group25"
     regions:
       - us-east-1
 
   full_infrastructure:
-    stack-name: group25-full-infrastructure-stack
     template: Group25.yaml
     parameters:
       VpcCIDR: "10.0.0.0/16"
       PublicSubnetCIDR: "10.0.1.0/24"
       PrivateSubnetCIDR: "10.0.2.0/24"
-      KeyName: "Group25"
+      KeyName: "group25"
     regions:
       - us-east-1
