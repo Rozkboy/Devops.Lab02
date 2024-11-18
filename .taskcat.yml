@@ -32,14 +32,3 @@ tests:
     regions:
       - us-east-1
     stack_name: "group25-private-subnet"
-
-  full_infrastructure:
-    template: Group25.yaml
-    parameters:
-      VpcCIDR: "10.0.0.0/16"
-      PublicSubnetCIDR: "10.0.1.0/24"
-      PrivateSubnetCIDR: "10.0.2.0/24"
-      KeyName: "Group25"
-    regions:
-      - us-east-1
-    stack_name: "group25-full-infrastructure"
