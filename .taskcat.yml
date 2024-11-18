@@ -5,6 +5,7 @@ project:
 
 tests:
   vpc:
+    stack-name: group25-vpc-stack
     template: Group25.yaml
     parameters:
       VpcCIDR: "10.0.0.0/16"
@@ -13,6 +14,7 @@ tests:
       - us-east-1
 
   public_subnet:
+    stack-name: group25-public-subnet-stack
     template: Group25.yaml
     parameters:
       VpcCIDR: "10.0.0.0/16"
@@ -22,6 +24,7 @@ tests:
       - us-east-1
 
   private_subnet:
+    stack-name: group25-private-subnet-stack
     template: Group25.yaml
     parameters:
       VpcCIDR: "10.0.0.0/16"
@@ -31,6 +34,7 @@ tests:
       - us-east-1
 
   full_infrastructure:
+    stack-name: group25-full-infrastructure-stack
     template: Group25.yaml
     parameters:
       VpcCIDR: "10.0.0.0/16"
