@@ -1,5 +1,5 @@
 project:
-  name: group25-cloudformation-project
+  name: group25-project
   regions:
     - us-east-1
 
