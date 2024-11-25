@@ -20,12 +20,12 @@ phases:
       - taskcat test run -d > taskcat_output.log || echo Taskcat failed
 
       - echo Contents of taskcat_output.log
-      - cat taskcat_output.log  # Xem nội dung của taskcat_output.log
-      - ls -l  # Liệt kê các tệp trong thư mục hiện tại
+      - cat taskcat_output.log  
+      - ls -l  
 
 artifacts:
   files:
     - Group25.yaml
-    - taskcat_output.log  # Đẩy tệp log lên cùng với artifacts
+    - taskcat_output.log  
   discard-paths: yes
-  base-directory: .  # Thư mục cơ bản chứa các tệp
+  base-directory: .  
